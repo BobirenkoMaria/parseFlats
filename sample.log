@@ -1,0 +1,456 @@
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): xn--80aarcfyj8km.xn--p1ai:443
+DEBUG:urllib3.connectionpool:https://xn--80aarcfyj8km.xn--p1ai:443 "GET / HTTP/1.1" 200 None
+ERROR:logger:Connection refused. Check website that you parse
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartments?page=1 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartments?page=1 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2158 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2179 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2139 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2145 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2085 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2078 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2088 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2152 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/1946 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartments?page=2 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2116 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2058 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2568 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): xn--80aarcfyj8km.xn--p1ai:443
+DEBUG:urllib3.connectionpool:https://xn--80aarcfyj8km.xn--p1ai:443 "GET / HTTP/1.1" 200 None
+ERROR:logger:Traceback (most recent call last):
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\parse.py", line 383, in parser
+    get_content(html.text)
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\parse.py", line 72, in get_content
+    busy = items.find('div', class_='apartment-info__status')
+AttributeError: 'NoneType' object has no attribute 'find'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\parse.py", line 259, in parse
+    parser(URL)
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\parse.py", line 387, in parser
+    logger.debug()
+TypeError: debug() missing 1 required positional argument: 'msg'
+
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartments?page=1 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartments?page=1 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): xn--80aarcfyj8km.xn--p1ai:443
+DEBUG:urllib3.connectionpool:https://xn--80aarcfyj8km.xn--p1ai:443 "GET / HTTP/1.1" 200 None
+DEBUG:logger:URL: https://зимаюжная.рф/#/profitbase/house/96140/facades?propertyId=9619713&floorNumber=1&filter=property.status:AVAILABLE - website code response: 200
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): xn--80aarcfyj8km.xn--p1ai:443
+DEBUG:urllib3.connectionpool:https://xn--80aarcfyj8km.xn--p1ai:443 "GET / HTTP/1.1" 200 None
+DEBUG:logger:URL: https://зимаюжная.рф/#/profitbase/house/96140/facades?propertyId=9619714&floorNumber=1&filter=property.status:AVAILABLE - website code response: 200
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): xn--80aarcfyj8km.xn--p1ai:443
+DEBUG:urllib3.connectionpool:https://xn--80aarcfyj8km.xn--p1ai:443 "GET / HTTP/1.1" 200 None
+DEBUG:logger:URL: https://зимаюжная.рф/#/profitbase/house/96140/facades?propertyId=9619715&floorNumber=1&filter=property.status:AVAILABLE - website code response: 200
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): xn--80aarcfyj8km.xn--p1ai:443
+DEBUG:urllib3.connectionpool:https://xn--80aarcfyj8km.xn--p1ai:443 "GET / HTTP/1.1" 200 None
+DEBUG:logger:URL: https://зимаюжная.рф/#/profitbase/house/96140/facades?propertyId=9619716&floorNumber=1&filter=property.status:AVAILABLE - website code response: 200
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): xn--80aarcfyj8km.xn--p1ai:443
+DEBUG:urllib3.connectionpool:https://xn--80aarcfyj8km.xn--p1ai:443 "GET / HTTP/1.1" 200 None
+DEBUG:logger:URL: https://зимаюжная.рф/#/profitbase/house/96140/facades?propertyId=9619717&floorNumber=1&filter=property.status:AVAILABLE - website code response: 200
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): xn--80aarcfyj8km.xn--p1ai:443
+DEBUG:urllib3.connectionpool:https://xn--80aarcfyj8km.xn--p1ai:443 "GET / HTTP/1.1" 200 None
+DEBUG:logger:URL: https://зимаюжная.рф/#/profitbase/house/96140/facades?propertyId=9619718&floorNumber=1&filter=property.status:AVAILABLE - website code response: 200
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): xn--80aarcfyj8km.xn--p1ai:443
+DEBUG:urllib3.connectionpool:https://xn--80aarcfyj8km.xn--p1ai:443 "GET / HTTP/1.1" 200 None
+DEBUG:logger:URL: https://зимаюжная.рф/#/profitbase/house/96140/facades?propertyId=9619719&floorNumber=1&filter=property.status:AVAILABLE - website code response: 200
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): xn--80aarcfyj8km.xn--p1ai:443
+DEBUG:urllib3.connectionpool:https://xn--80aarcfyj8km.xn--p1ai:443 "GET / HTTP/1.1" 200 None
+DEBUG:logger:URL: https://зимаюжная.рф/#/profitbase/house/96140/facades?propertyId=9619720&floorNumber=1&filter=property.status:AVAILABLE - website code response: 200
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): xn--80aarcfyj8km.xn--p1ai:443
+DEBUG:urllib3.connectionpool:https://xn--80aarcfyj8km.xn--p1ai:443 "GET / HTTP/1.1" 200 None
+DEBUG:logger:URL: https://зимаюжная.рф/#/profitbase/house/96140/facades?propertyId=9619721&floorNumber=1&filter=property.status:AVAILABLE - website code response: 200
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): xn--80aarcfyj8km.xn--p1ai:443
+DEBUG:urllib3.connectionpool:https://xn--80aarcfyj8km.xn--p1ai:443 "GET / HTTP/1.1" 200 None
+DEBUG:logger:URL: https://зимаюжная.рф/#/profitbase/house/96140/facades?propertyId=9619722&floorNumber=1&filter=property.status:AVAILABLE - website code response: 200
+ERROR:logger:Traceback (most recent call last):
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\parse.py", line 259, in parse
+    parser(URL)
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\parse.py", line 380, in parser
+    html = get_html(URL)
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\parse.py", line 37, in get_html
+    r = requests.get(url, headers=HEADERS, params=params)
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\venv\lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\venv\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\venv\lib\site-packages\requests\sessions.py", line 573, in request
+    prep = self.prepare_request(req)
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\venv\lib\site-packages\requests\sessions.py", line 484, in prepare_request
+    p.prepare(
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\venv\lib\site-packages\requests\models.py", line 368, in prepare
+    self.prepare_url(url, params)
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\venv\lib\site-packages\requests\models.py", line 439, in prepare_url
+    raise MissingSchema(
+requests.exceptions.MissingSchema: Invalid URL '': No scheme supplied. Perhaps you meant http://?
+
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartments?page=1 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartments?page=1 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2158 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2179 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2139 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2145 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2085 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2078 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2088 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2152 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/1946 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartments?page=2 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2116 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2058 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2568 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2590 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2567 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2503 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2592 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2545 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2570 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartments?page=3 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2503 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2545 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/3782 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/1366 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/1383 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/1362 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/1359 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/1374 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/1368 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartments?page=4 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/1359 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/1363 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2653 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2623 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2625 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2626 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2654 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2600 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2624 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartments?page=5 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2652 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2655 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2628 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2629 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2627 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2657 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2630 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2656 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2679 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartments?page=6 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2679 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2630 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/1470 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/1375 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/1430 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/1348 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/3286 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/3213 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/4215 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartments?page=7 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/3792 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/3894 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/3804 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/3791 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/3922 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/3857 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/4223 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/4338 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/3974 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartments?page=8 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/3944 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/3941 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/4371 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/4377 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/4372 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2149 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/3383 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2142 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2154 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartments?page=9 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2252 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2149 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/3371 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/1956 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2159 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2138 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2148 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2248 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2135 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartments?page=10 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2146 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2156 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/3078 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/1955 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/3379 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2168 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2140 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2136 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/3285 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartments?page=11 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/3152 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/3393 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/3311 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/3201 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/3195 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/3198 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/3381 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/3221 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/3199 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartments?page=12 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2605 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2607 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2699 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2608 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2726 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2577 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2700 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2576 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2550 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartments?page=13 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2563 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2724 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2723 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2564 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2509 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2151 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:https://vlzu.ru:443 "GET /apartment/2155 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vlzu.ru:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): xn--80aarcfyj8km.xn--p1ai:443
+DEBUG:urllib3.connectionpool:https://xn--80aarcfyj8km.xn--p1ai:443 "GET / HTTP/1.1" 200 None
+DEBUG:parse:URL: https://зимаюжная.рф/#/profitbase/house/96140/facades?propertyId=9619713&floorNumber=1&filter=property.status:AVAILABLE - website code response: 200
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): xn--80aarcfyj8km.xn--p1ai:443
+DEBUG:urllib3.connectionpool:https://xn--80aarcfyj8km.xn--p1ai:443 "GET / HTTP/1.1" 200 None
+DEBUG:parse:URL: https://зимаюжная.рф/#/profitbase/house/96140/facades?propertyId=9619714&floorNumber=1&filter=property.status:AVAILABLE - website code response: 200
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): xn--80aarcfyj8km.xn--p1ai:443
+ERROR:parse:Traceback (most recent call last):
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\parse.py", line 259, in parse
+    URL = get_url(house=num_house, flat=flat + 712)
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\parse.py", line 63, in get_url
+    print(chardet.detect(url))
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\venv\lib\site-packages\chardet\__init__.py", line 34, in detect
+    raise TypeError(
+TypeError: Expected object of type bytes or bytearray, got: <class 'str'>
+
+ERROR:parse:Traceback (most recent call last):
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\parse.py", line 264, in parse
+    for page in range(1, max_page() + 1):
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\parse.py", line 201, in max_page
+    URL = get_url(1)
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\parse.py", line 63, in get_url
+    print(chardet.detect(url))
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\venv\lib\site-packages\chardet\__init__.py", line 34, in detect
+    raise TypeError(
+TypeError: Expected object of type bytes or bytearray, got: <class 'str'>
+
+ERROR:parse:Traceback (most recent call last):
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\parse.py", line 271, in parse
+    URL = get_url(page)
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\parse.py", line 63, in get_url
+    print(chardet.detect(url))
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\venv\lib\site-packages\chardet\__init__.py", line 34, in detect
+    raise TypeError(
+TypeError: Expected object of type bytes or bytearray, got: <class 'str'>
+
+ERROR:parse:Traceback (most recent call last):
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\parse.py", line 289, in parse
+    URL = get_url(house=house, floor=floor, flat=flat)
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\parse.py", line 63, in get_url
+    print(chardet.detect(url))
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\venv\lib\site-packages\chardet\__init__.py", line 34, in detect
+    raise TypeError(
+TypeError: Expected object of type bytes or bytearray, got: <class 'str'>
+
+ERROR:parse:Traceback (most recent call last):
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\parse.py", line 314, in parse
+    URL = get_url(house=house, flat=flat)
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\parse.py", line 63, in get_url
+    print(chardet.detect(url))
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\venv\lib\site-packages\chardet\__init__.py", line 34, in detect
+    raise TypeError(
+TypeError: Expected object of type bytes or bytearray, got: <class 'str'>
+
+ERROR:parse:Traceback (most recent call last):
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\parse.py", line 322, in parse
+    URL = get_url(flat=flat)
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\parse.py", line 63, in get_url
+    print(chardet.detect(url))
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\venv\lib\site-packages\chardet\__init__.py", line 34, in detect
+    raise TypeError(
+TypeError: Expected object of type bytes or bytearray, got: <class 'str'>
+
+ERROR:parse:Traceback (most recent call last):
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\parse.py", line 330, in parse
+    URL = get_url(flat=flat)
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\parse.py", line 63, in get_url
+    print(chardet.detect(url))
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\venv\lib\site-packages\chardet\__init__.py", line 34, in detect
+    raise TypeError(
+TypeError: Expected object of type bytes or bytearray, got: <class 'str'>
+
+ERROR:parse:Traceback (most recent call last):
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\parse.py", line 338, in parse
+    URL = get_url(flat=flat)
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\parse.py", line 63, in get_url
+    print(chardet.detect(url))
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\venv\lib\site-packages\chardet\__init__.py", line 34, in detect
+    raise TypeError(
+TypeError: Expected object of type bytes or bytearray, got: <class 'str'>
+
+ERROR:parse:Traceback (most recent call last):
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\parse.py", line 259, in parse
+    URL = get_url(house=num_house, flat=flat + 712)
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\parse.py", line 63, in get_url
+    print(chardet.detect(url))
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\venv\lib\site-packages\chardet\__init__.py", line 34, in detect
+    raise TypeError(
+TypeError: Expected object of type bytes or bytearray, got: <class 'str'>
+

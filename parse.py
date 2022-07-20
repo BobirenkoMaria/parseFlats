@@ -1,7 +1,10 @@
+import traceback
 import requests
 from bs4 import BeautifulSoup
 from selenium import webdriver
 import time
+from logger_config import logger
+import chardet
 
 
 HEADERS = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
@@ -12,9 +15,13 @@ website = None
 houseFloorFlat_num = [0, 0, 0]
 
 
+id_flat = 0
 def set_info(name, flat, floor, house, area, price, busy):
+    global id_flat
+
     info.append({
-        'Name': str(name),
+        'id': int(id_flat),
+        'name': str(name),
         'flatNum': int(flat),
         'floorNum': int(floor),
         'houseNum': int(house),
@@ -22,6 +29,7 @@ def set_info(name, flat, floor, house, area, price, busy):
         'price': int(price),
         'busy': str(busy)
     })
+    id_flat += 1
 
 
 def get_html(url, params=None):
@@ -51,6 +59,8 @@ def get_url(page=None, house=None, floor=None, flat=None):
         url = f'https://lasto4ka.ru/select/floor/1/{flat}#flat'
     elif website == 8:
         url = f'https://sabaneeva22a.ru/flat-info/?{flat}'
+
+    print(chardet.detect(url))
     return url
 
 
@@ -171,7 +181,7 @@ def get_content(html):
 
         flat = soup.find('li', class_='p10__flat-num')
         flat = flat.find_all('span')
-        flat = flat[1]
+        flat = flat[1].get_text()
 
         floor = soup.find('li', class_='p10__flat-floor')
         floor = floor.find_all('span')
@@ -230,115 +240,111 @@ def website_parse(url):
             print("Connection refused in website_parse")
 
 
-numeration = 1
-def parse(num):
-    global numeration
+def parse(num, id_flat_g):
+    global id_flat
+    global cycle_times
     global houseFloorFlat_num
-    global website
-    website = num
+    try:
+        setup(id_flat_g, num)
 
-    if website == 1:
-        for house in range(1, 3):
-            num_house = 140 if house == 1 else 657
+        if website == 0:
+            return info
 
-            houseFloorFlat_num[0] = house
-            for flat in range(1, 112):
-                URL = get_url(house=num_house, flat=flat + 712)
+        elif website == 1:
+            for house in range(1, 3):
+                num_house = 140 if house == 1 else 657
 
-                parser(URL)
-
-    elif website == 2:
-        for page in range(1, max_page()+1):
-            URL = get_url(page)
-
-            parser(URL)
-
-            print(f'{numeration}-ая страница')
-            numeration += 1
-
-    elif website == 3:
-        for page in range(1, 3):
-            URL = get_url(page)
-
-            text = get_html_with_driver(URL)
-            get_content(text)
-
-            print(f'{numeration}-ая страница')
-            numeration += 1
-
-    elif website == 4:
-        for house in range(1, 3):
-            flats_count = 1
-            for floor in range(2, 26):
-                last_flat = flats_count
-                if floor == 2:
-                    flats_count += 12
-                else:
-                    flats_count += 13
-
-                for flat in range(last_flat, flats_count):
-                    houseFloorFlat_num = [house, floor, flat]
-
-                    URL = get_url(house=house, floor=floor, flat=flat)
+                houseFloorFlat_num[0] = house
+                for flat in range(1, 112):
+                    URL = get_url(house=num_house, flat=flat + 712)
 
                     parser(URL)
 
-                print(f'Скопирован {floor}-й этаж {house}-го дома')
-
-    elif website == 5:
-        for house in range(1, 8):
-            count_flat = 0
-            if house == 1:
-                count_flat = 21
-            elif house == 2:
-                count_flat = 36
-            elif house == 3:
-                count_flat = 16
-            elif house == 4:
-                count_flat = 36
-            elif house == 5:
-                count_flat = 24
-            elif house == 6:
-                count_flat = 24
-            elif house == 7:
-                count_flat = 24
-
-            for flat in range(1, count_flat+1):
-                houseFloorFlat_num = [house, 0, flat]
-
-                URL = get_url(house=house, flat=flat)
+        elif website == 2:
+            for page in range(1, max_page() + 1):
+                URL = get_url(page)
 
                 parser(URL)
 
-    elif website == 6:
-        for flat in range(1, 232):
-            houseFloorFlat_num[2] = flat
+        elif website == 3:
+            for page in range(1, 3):
+                URL = get_url(page)
 
-            URL = get_url(flat=flat)
+                text = get_html_with_driver(URL)
+                get_content(text)
 
-            parser(URL)
+        elif website == 4:
+            for house in range(1, 3):
+                flats_count = 1
+                for floor in range(2, 26):
+                    last_flat = flats_count
+                    if floor == 2:
+                        flats_count += 12
+                    else:
+                        flats_count += 13
 
-    elif website == 7:
-        for flat in range(1, 11):
-            houseFloorFlat_num = [0, 0, flat]
+                    for flat in range(last_flat, flats_count):
+                        houseFloorFlat_num = [house, floor, flat]
 
-            URL = get_url(flat=flat)
-            html = get_html_with_driver(URL)
-            get_content(html)
+                        URL = get_url(house=house, floor=floor, flat=flat)
 
-            print(f'На {round(flat*100/120, 2)}% завершено')
+                        parser(URL)
 
-    elif website == 8:
-        for flat in range(1, 172):
-            houseFloorFlat_num[2] = flat
+        elif website == 5:
+            for house in range(1, 8):
+                count_flat = 0
+                if house == 1:
+                    count_flat = 21
+                elif house == 2:
+                    count_flat = 36
+                elif house == 3:
+                    count_flat = 16
+                elif house == 4:
+                    count_flat = 36
+                elif house == 5:
+                    count_flat = 24
+                elif house == 6:
+                    count_flat = 24
+                elif house == 7:
+                    count_flat = 24
 
-            URL = get_url(flat=flat)
+                for flat in range(1, count_flat + 1):
+                    houseFloorFlat_num = [house, 0, flat]
 
-            parser(URL)
+                    URL = get_url(house=house, flat=flat)
 
-            print('Check')
+                    parser(URL)
 
-    return info
+        elif website == 6:
+            for flat in range(1, 232):
+                houseFloorFlat_num[2] = flat
+
+                URL = get_url(flat=flat)
+
+                parser(URL)
+
+        elif website == 7:
+            for flat in range(1, 11):
+                houseFloorFlat_num = [0, 0, flat]
+
+                URL = get_url(flat=flat)
+                html = get_html_with_driver(URL)
+                get_content(html)
+
+        elif website == 8:
+            for flat in range(1, 172):
+                houseFloorFlat_num[2] = flat
+
+                URL = get_url(flat=flat)
+
+                parser(URL)
+
+    except Exception as ex:
+        #logger.error("Connection refused. Check website that you parse")
+        logger.error(traceback.format_exc())
+
+    cycle_times = 0
+    return info, id_flat
 
 
 def get_html_with_driver(url):
@@ -360,7 +366,7 @@ def get_html_with_driver(url):
                 html = (driver.execute_script(str)).text
                 break
         except Exception as ex:
-            print(ex)
+            checking_cycle()
             time.sleep(1)
 
     driver.close()
@@ -371,6 +377,7 @@ def get_html_with_driver(url):
 
 def parser(URL):
     html = None
+
     while html == None:
         html = get_html(URL)
         try:
@@ -378,4 +385,22 @@ def parser(URL):
                 get_content(html.text)
 
         except AttributeError:
-            print("Connection refused")
+            checking_cycle()
+            logger.debug(f'URL: {URL} - website code response: {html.status_code}')
+
+
+cycle_times = 0
+def checking_cycle():
+    global cycle_times
+    cycle_times += 1
+
+    if cycle_times >= 10:
+        parse(0, 0)
+
+
+def setup(id_flat_l, num):
+    global website
+    global id_flat
+
+    id_flat = id_flat_l
+    website = num
