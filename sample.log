@@ -454,3 +454,121 @@ ERROR:parse:Traceback (most recent call last):
     raise TypeError(
 TypeError: Expected object of type bytes or bytearray, got: <class 'str'>
 
+ERROR:parse:Traceback (most recent call last):
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\parse.py", line 271, in parse
+    URL = get_url(page)
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\parse.py", line 63, in get_url
+    print(chardet.detect(url))
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\venv\lib\site-packages\chardet\__init__.py", line 34, in detect
+    raise TypeError(
+TypeError: Expected object of type bytes or bytearray, got: <class 'str'>
+
+ERROR:parse:Traceback (most recent call last):
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\parse.py", line 271, in parse
+    URL = get_url(page)
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\parse.py", line 63, in get_url
+    print(chardet.detect(url))
+  File "C:\Users\Wayami\PycharmProjects\parseFlats\venv\lib\site-packages\chardet\__init__.py", line 34, in detect
+    raise TypeError(
+TypeError: Expected object of type bytes or bytearray, got: <class 'str'>
+
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:54834/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": []}}}}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:54834
+DEBUG:urllib3.connectionpool:http://localhost:54834 "POST /session HTTP/1.1" 200 792
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"103.0.5060.114","chrome":{"chromedriverVersion":"103.0.5060.53 (a1711811edd74ff1cf2150f36ffa3b0dae40b17f-refs/branch-heads/5060@{#853})","userDataDir":"C:\\Users\\Wayami\\AppData\\Local\\Temp\\scoped_dir21540_1030782416"},"goog:chromeOptions":{"debuggerAddress":"localhost:54837"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:virtualAuthenticators":true},"sessionId":"7f2470cb50967eb1c8467b9f7d6b2c49"}} | headers=HTTPHeaderDict({'Content-Length': '792', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:54834/session/7f2470cb50967eb1c8467b9f7d6b2c49/url {"url": "https://davinchigroup.ru/flats/#/complex?page=1"}
+DEBUG:urllib3.connectionpool:http://localhost:54834 "POST /session/7f2470cb50967eb1c8467b9f7d6b2c49/url HTTP/1.1" 200 14
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:54834/session/7f2470cb50967eb1c8467b9f7d6b2c49/execute/sync {"script": "return document.querySelector(\"#code_block-26-235 > kvg-widget\").shadowRoot.querySelector(\"#app > div.widget__wrapper > div.widget__content > div > section > div > div.flats > div.flats__content > div\")", "args": []}
+DEBUG:urllib3.connectionpool:http://localhost:54834 "POST /session/7f2470cb50967eb1c8467b9f7d6b2c49/execute/sync HTTP/1.1" 200 88
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"72abfdf0-3224-42bc-9785-11b11929fbb1"}} | headers=HTTPHeaderDict({'Content-Length': '88', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:GET http://localhost:54834/session/7f2470cb50967eb1c8467b9f7d6b2c49/element/72abfdf0-3224-42bc-9785-11b11929fbb1/text {"id": "72abfdf0-3224-42bc-9785-11b11929fbb1"}
+DEBUG:urllib3.connectionpool:http://localhost:54834 "GET /session/7f2470cb50967eb1c8467b9f7d6b2c49/element/72abfdf0-3224-42bc-9785-11b11929fbb1/text HTTP/1.1" 200 2247
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":"2-комнатная\nДом № 1\n8 993 750 ₽\n125 000 ₽ / м²\n№20\n4\n71,95 м²\n3-комнатная\nДом № 1\n11 483 000 ₽\n100 000 ₽ / м²\n№37\n3\n114,83 м²\n2-комнатная\nДом № 1\n8 333 000 ₽\n130 000 ₽ / м²\n№41\n3\n64,10 м²\n3-комнатная\nДом № 1\n9 979 200 ₽\n110 000 ₽ / м²\n№13\n3\n90,72 м²\n3-комнатная\nДом № 1\n11 483 000 ₽\n100 000 ₽ / м²\n№6\n1\n114,83 м²\n2-комнатная\nДом № 1\n7 682 850 ₽\n135 000 ₽ / м²\n№11\n2\n56,91 м²\n1-комнатная\nДом № 1\n6 140 750 ₽\n145 000 ₽ / м²\n№3\n1\n42,35 м²\n1-комнатная\nДом № 1\n6 166 850 ₽\n145 000 ₽ / м²\n№4\n1\n42,53 м²\n3-комнатная\nДом № 1\n9 979 200 ₽\n110 000 ₽ / м²\n№19\n4\n90,72 м²\n3-комнатная\nДом № 1\n11 483 000 ₽\n100 000 ₽ / м²\n№31\n2\n114,83 м²\n2-комнатная\nДом № 1\n8 993 750 ₽\n125 000 ₽ / м²\n№2\n1\n71,95 м²\n1-комнатная\nДом № 1\n6 140 750 ₽\n145 000 ₽ / м²\n№21\n4\n42,35 м²\n1-комнатная\nДом № 1\n6 166 850 ₽\n145 000 ₽ / м²\n№10\n2\n42,53 м²\n1-комнатная\nДом № 1\n6 140 750 ₽\n145 000 ₽ / м²\n№34\n2\n42,35 м²\n1-комнатная\nДом № 1\n6 166 850 ₽\n145 000 ₽ / м²\n№22\n4\n42,53 м²\n2-комнатная\nДом № 1\n8 993 750 ₽\n125 000 ₽ / м²\n№14\n3\n71,95 м²\n3-комнатная\nДом № 1\n11 483 000 ₽\n100 000 ₽ / м²\n№25\n1\n114,83 м²\n2-комнатная\nДом № 1\n7 682 850 ₽\n135 000 ₽ / м²\n№26\n1\n56,91 м²\n2-комнатная\nДом № 1\n7 916 350 ₽\n123 500 ₽ / м²\n№29\n1\n64,10 м²\n3-комнатная\nДом № 1\n9 053 548 ₽\n109 250 ₽ / м²\n№30\n1\n82,87 м²\n1-комнатная\nДом № 1\n6 166 850 ₽\n145 000 ₽ / м²\n№27\n1\n42,53 м²\n1-комнатная\nДом № 1\n6 166 850 ₽\n145 000 ₽ / м²\n№33\n2\n42,53 м²\n3-комнатная\nДом № 1\n9 979 200 ₽\n110 000 ₽ / м²\n№1\n1\n90,72 м²\n3-комнатная\nДом № 1\n11 483 000 ₽\n100 000 ₽ / м²\n№12\n2\n114,83 м²"} | headers=HTTPHeaderDict({'Content-Length': '2247', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:DELETE http://localhost:54834/session/7f2470cb50967eb1c8467b9f7d6b2c49/window {}
+DEBUG:urllib3.connectionpool:http://localhost:54834 "DELETE /session/7f2470cb50967eb1c8467b9f7d6b2c49/window HTTP/1.1" 200 12
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'Content-Length': '12', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:DELETE http://localhost:54834/session/7f2470cb50967eb1c8467b9f7d6b2c49 {}
+DEBUG:urllib3.connectionpool:http://localhost:54834 "DELETE /session/7f2470cb50967eb1c8467b9f7d6b2c49 HTTP/1.1" 200 14
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:54888/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": []}}}}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:54888
+DEBUG:urllib3.connectionpool:http://localhost:54888 "POST /session HTTP/1.1" 200 791
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"103.0.5060.114","chrome":{"chromedriverVersion":"103.0.5060.53 (a1711811edd74ff1cf2150f36ffa3b0dae40b17f-refs/branch-heads/5060@{#853})","userDataDir":"C:\\Users\\Wayami\\AppData\\Local\\Temp\\scoped_dir23664_293483724"},"goog:chromeOptions":{"debuggerAddress":"localhost:54891"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:virtualAuthenticators":true},"sessionId":"cc2ee905f9c9c80d1f6f2b517ca28851"}} | headers=HTTPHeaderDict({'Content-Length': '791', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:54888/session/cc2ee905f9c9c80d1f6f2b517ca28851/url {"url": "https://davinchigroup.ru/flats/#/complex?page=2"}
+DEBUG:urllib3.connectionpool:http://localhost:54888 "POST /session/cc2ee905f9c9c80d1f6f2b517ca28851/url HTTP/1.1" 200 14
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:54888/session/cc2ee905f9c9c80d1f6f2b517ca28851/execute/sync {"script": "return document.querySelector(\"#code_block-26-235 > kvg-widget\").shadowRoot.querySelector(\"#app > div.widget__wrapper > div.widget__content > div > section > div > div.flats > div.flats__content > div\")", "args": []}
+DEBUG:urllib3.connectionpool:http://localhost:54888 "POST /session/cc2ee905f9c9c80d1f6f2b517ca28851/execute/sync HTTP/1.1" 200 88
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"280e43ef-e776-4038-962f-8c5d606baa13"}} | headers=HTTPHeaderDict({'Content-Length': '88', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:GET http://localhost:54888/session/cc2ee905f9c9c80d1f6f2b517ca28851/element/280e43ef-e776-4038-962f-8c5d606baa13/text {"id": "280e43ef-e776-4038-962f-8c5d606baa13"}
+DEBUG:urllib3.connectionpool:http://localhost:54888 "GET /session/cc2ee905f9c9c80d1f6f2b517ca28851/element/280e43ef-e776-4038-962f-8c5d606baa13/text HTTP/1.1" 200 474
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":"2-комнатная\nДом № 1\n7 682 850 ₽\n135 000 ₽ / м²\n№32\n2\n56,91 м²\n3-комнатная\nДом № 1\n9 530 050 ₽\n115 000 ₽ / м²\n№36\n2\n82,87 м²\n3-комнатная\nДом № 1\n9 979 200 ₽\n110 000 ₽ / м²\n№7\n2\n90,72 м²\n1-комнатная\nДом № 1\n6 140 750 ₽\n145 000 ₽ / м²\n№40\n3\n42,35 м²\n2-комнатная\nДом № 1\n7 682 850 ₽\n135 000 ₽ / м²\n№17\n3\n56,91 м²"} | headers=HTTPHeaderDict({'Content-Length': '474', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:DELETE http://localhost:54888/session/cc2ee905f9c9c80d1f6f2b517ca28851/window {}
+DEBUG:urllib3.connectionpool:http://localhost:54888 "DELETE /session/cc2ee905f9c9c80d1f6f2b517ca28851/window HTTP/1.1" 200 12
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'Content-Length': '12', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:DELETE http://localhost:54888/session/cc2ee905f9c9c80d1f6f2b517ca28851 {}
+DEBUG:urllib3.connectionpool:http://localhost:54888 "DELETE /session/cc2ee905f9c9c80d1f6f2b517ca28851 HTTP/1.1" 200 14
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:55660/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": []}}}}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:55660
+DEBUG:urllib3.connectionpool:http://localhost:55660 "POST /session HTTP/1.1" 200 792
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"103.0.5060.134","chrome":{"chromedriverVersion":"103.0.5060.53 (a1711811edd74ff1cf2150f36ffa3b0dae40b17f-refs/branch-heads/5060@{#853})","userDataDir":"C:\\Users\\Wayami\\AppData\\Local\\Temp\\scoped_dir13328_1557159642"},"goog:chromeOptions":{"debuggerAddress":"localhost:55663"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:virtualAuthenticators":true},"sessionId":"6c82ede4808439cf70daa4479ab49936"}} | headers=HTTPHeaderDict({'Content-Length': '792', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:55660/session/6c82ede4808439cf70daa4479ab49936/url {"url": "https://davinchigroup.ru/flats/#/complex?page=1"}
+DEBUG:urllib3.connectionpool:http://localhost:55660 "POST /session/6c82ede4808439cf70daa4479ab49936/url HTTP/1.1" 200 14
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:55660/session/6c82ede4808439cf70daa4479ab49936/execute/sync {"script": "return document.querySelector(\"#code_block-26-235 > kvg-widget\").shadowRoot.querySelector(\"#app > div.widget__wrapper > div.widget__content > div > section > div > div.flats > div.flats__content > div\")", "args": []}
+DEBUG:urllib3.connectionpool:http://localhost:55660 "POST /session/6c82ede4808439cf70daa4479ab49936/execute/sync HTTP/1.1" 200 88
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"4d320b98-4f56-43b6-90a3-565678c40f76"}} | headers=HTTPHeaderDict({'Content-Length': '88', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:GET http://localhost:55660/session/6c82ede4808439cf70daa4479ab49936/element/4d320b98-4f56-43b6-90a3-565678c40f76/text {"id": "4d320b98-4f56-43b6-90a3-565678c40f76"}
+DEBUG:urllib3.connectionpool:http://localhost:55660 "GET /session/6c82ede4808439cf70daa4479ab49936/element/4d320b98-4f56-43b6-90a3-565678c40f76/text HTTP/1.1" 200 2247
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":"2-комнатная\nДом № 1\n8 993 750 ₽\n125 000 ₽ / м²\n№20\n4\n71,95 м²\n3-комнатная\nДом № 1\n11 483 000 ₽\n100 000 ₽ / м²\n№37\n3\n114,83 м²\n2-комнатная\nДом № 1\n8 333 000 ₽\n130 000 ₽ / м²\n№41\n3\n64,10 м²\n3-комнатная\nДом № 1\n9 979 200 ₽\n110 000 ₽ / м²\n№13\n3\n90,72 м²\n3-комнатная\nДом № 1\n11 483 000 ₽\n100 000 ₽ / м²\n№6\n1\n114,83 м²\n2-комнатная\nДом № 1\n7 682 850 ₽\n135 000 ₽ / м²\n№11\n2\n56,91 м²\n1-комнатная\nДом № 1\n6 140 750 ₽\n145 000 ₽ / м²\n№3\n1\n42,35 м²\n1-комнатная\nДом № 1\n6 166 850 ₽\n145 000 ₽ / м²\n№4\n1\n42,53 м²\n3-комнатная\nДом № 1\n9 979 200 ₽\n110 000 ₽ / м²\n№19\n4\n90,72 м²\n3-комнатная\nДом № 1\n11 483 000 ₽\n100 000 ₽ / м²\n№31\n2\n114,83 м²\n2-комнатная\nДом № 1\n8 993 750 ₽\n125 000 ₽ / м²\n№2\n1\n71,95 м²\n1-комнатная\nДом № 1\n6 140 750 ₽\n145 000 ₽ / м²\n№21\n4\n42,35 м²\n1-комнатная\nДом № 1\n6 166 850 ₽\n145 000 ₽ / м²\n№10\n2\n42,53 м²\n1-комнатная\nДом № 1\n6 140 750 ₽\n145 000 ₽ / м²\n№34\n2\n42,35 м²\n1-комнатная\nДом № 1\n6 166 850 ₽\n145 000 ₽ / м²\n№22\n4\n42,53 м²\n2-комнатная\nДом № 1\n8 993 750 ₽\n125 000 ₽ / м²\n№14\n3\n71,95 м²\n3-комнатная\nДом № 1\n11 483 000 ₽\n100 000 ₽ / м²\n№25\n1\n114,83 м²\n2-комнатная\nДом № 1\n7 682 850 ₽\n135 000 ₽ / м²\n№26\n1\n56,91 м²\n2-комнатная\nДом № 1\n7 916 350 ₽\n123 500 ₽ / м²\n№29\n1\n64,10 м²\n3-комнатная\nДом № 1\n9 053 548 ₽\n109 250 ₽ / м²\n№30\n1\n82,87 м²\n1-комнатная\nДом № 1\n6 166 850 ₽\n145 000 ₽ / м²\n№27\n1\n42,53 м²\n1-комнатная\nДом № 1\n6 166 850 ₽\n145 000 ₽ / м²\n№33\n2\n42,53 м²\n3-комнатная\nДом № 1\n9 979 200 ₽\n110 000 ₽ / м²\n№1\n1\n90,72 м²\n3-комнатная\nДом № 1\n11 483 000 ₽\n100 000 ₽ / м²\n№12\n2\n114,83 м²"} | headers=HTTPHeaderDict({'Content-Length': '2247', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:DELETE http://localhost:55660/session/6c82ede4808439cf70daa4479ab49936/window {}
+DEBUG:urllib3.connectionpool:http://localhost:55660 "DELETE /session/6c82ede4808439cf70daa4479ab49936/window HTTP/1.1" 200 12
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'Content-Length': '12', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:DELETE http://localhost:55660/session/6c82ede4808439cf70daa4479ab49936 {}
+DEBUG:urllib3.connectionpool:http://localhost:55660 "DELETE /session/6c82ede4808439cf70daa4479ab49936 HTTP/1.1" 200 14
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:55716/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": []}}}}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:55716
+DEBUG:urllib3.connectionpool:http://localhost:55716 "POST /session HTTP/1.1" 200 792
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"103.0.5060.134","chrome":{"chromedriverVersion":"103.0.5060.53 (a1711811edd74ff1cf2150f36ffa3b0dae40b17f-refs/branch-heads/5060@{#853})","userDataDir":"C:\\Users\\Wayami\\AppData\\Local\\Temp\\scoped_dir12920_1708514700"},"goog:chromeOptions":{"debuggerAddress":"localhost:55719"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:virtualAuthenticators":true},"sessionId":"d6cafe514680d3dbe2be7ed9f5c665da"}} | headers=HTTPHeaderDict({'Content-Length': '792', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:55716/session/d6cafe514680d3dbe2be7ed9f5c665da/url {"url": "https://davinchigroup.ru/flats/#/complex?page=2"}
+DEBUG:urllib3.connectionpool:http://localhost:55716 "POST /session/d6cafe514680d3dbe2be7ed9f5c665da/url HTTP/1.1" 200 14
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:55716/session/d6cafe514680d3dbe2be7ed9f5c665da/execute/sync {"script": "return document.querySelector(\"#code_block-26-235 > kvg-widget\").shadowRoot.querySelector(\"#app > div.widget__wrapper > div.widget__content > div > section > div > div.flats > div.flats__content > div\")", "args": []}
+DEBUG:urllib3.connectionpool:http://localhost:55716 "POST /session/d6cafe514680d3dbe2be7ed9f5c665da/execute/sync HTTP/1.1" 200 88
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"758f2d8f-7a2e-4b3c-9868-4ea2ea519168"}} | headers=HTTPHeaderDict({'Content-Length': '88', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:GET http://localhost:55716/session/d6cafe514680d3dbe2be7ed9f5c665da/element/758f2d8f-7a2e-4b3c-9868-4ea2ea519168/text {"id": "758f2d8f-7a2e-4b3c-9868-4ea2ea519168"}
+DEBUG:urllib3.connectionpool:http://localhost:55716 "GET /session/d6cafe514680d3dbe2be7ed9f5c665da/element/758f2d8f-7a2e-4b3c-9868-4ea2ea519168/text HTTP/1.1" 200 474
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":"2-комнатная\nДом № 1\n7 682 850 ₽\n135 000 ₽ / м²\n№32\n2\n56,91 м²\n3-комнатная\nДом № 1\n9 530 050 ₽\n115 000 ₽ / м²\n№36\n2\n82,87 м²\n3-комнатная\nДом № 1\n9 979 200 ₽\n110 000 ₽ / м²\n№7\n2\n90,72 м²\n1-комнатная\nДом № 1\n6 140 750 ₽\n145 000 ₽ / м²\n№40\n3\n42,35 м²\n2-комнатная\nДом № 1\n7 682 850 ₽\n135 000 ₽ / м²\n№17\n3\n56,91 м²"} | headers=HTTPHeaderDict({'Content-Length': '474', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:DELETE http://localhost:55716/session/d6cafe514680d3dbe2be7ed9f5c665da/window {}
+DEBUG:urllib3.connectionpool:http://localhost:55716 "DELETE /session/d6cafe514680d3dbe2be7ed9f5c665da/window HTTP/1.1" 200 12
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'Content-Length': '12', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:DELETE http://localhost:55716/session/d6cafe514680d3dbe2be7ed9f5c665da {}
+DEBUG:urllib3.connectionpool:http://localhost:55716 "DELETE /session/d6cafe514680d3dbe2be7ed9f5c665da HTTP/1.1" 200 14
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request

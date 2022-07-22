@@ -4,7 +4,6 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 import time
 from logger_config import logger
-import chardet
 
 
 HEADERS = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
@@ -60,7 +59,7 @@ def get_url(page=None, house=None, floor=None, flat=None):
     elif website == 8:
         url = f'https://sabaneeva22a.ru/flat-info/?{flat}'
 
-    print(chardet.detect(url))
+    #print(chardet.detect(url))
     return url
 
 

@@ -14,9 +14,13 @@ info = []
     7) Ласточка
     8) Владстрой'''
 
-for website in range(1, 9):
+print('Началось выполнение')
+
+for website in range(3, 4):
     info, id_flat = parse(website, id_flat_g)
     id_flat_g += (id_flat - id_flat_g)
+
+    print('')
 
 with open('info_flats.json', 'w', encoding='utf-8') as file:
     json.dump(info, file, ensure_ascii=False)
