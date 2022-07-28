@@ -3,6 +3,8 @@ import requests
 from bs4 import BeautifulSoup
 from selenium import webdriver
 import time
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options
 from logger_config import logger
 
 
@@ -43,11 +45,12 @@ def get_url(page=None, house=None, floor=None, flat=None):
     url = ''
 
     if website == 1:
-        url = f'https://зимаюжная.рф/#/profitbase/house/96{house}/facades?propertyId=9619{flat}&floorNumber=1&filter=property.status:AVAILABLE'
+        url = f'https://smart-catalog.profitbase.ru/catalog/projects/list?' \
+              f'accountId=3397&referrer=https://xn--80aarcfyj8km.xn--p1ai&' \
+              f'profitbaseDomain=profitbase.ru&filter=property.status:AVAILABLE' \
+              f'&pbApiKey=07f58a798b2072bc3de3f64c2f3530e6&showStock=true'
     elif website == 2:
         url = f'https://vlzu.ru/apartments?page={page}'
-    elif website == 3:
-        url = f'https://davinchigroup.ru/flats/#/complex?page={page}'
     elif website == 4:
         url = f'https://акватория-жк.рф/dom{house}/etazh{floor}/vasha-kvartira{flat}'
     elif website == 5:
@@ -59,7 +62,6 @@ def get_url(page=None, house=None, floor=None, flat=None):
     elif website == 8:
         url = f'https://sabaneeva22a.ru/flat-info/?{flat}'
 
-    #print(chardet.detect(url))
     return url
 
 
@@ -68,15 +70,26 @@ def get_content(html):
     if website == 1:
         soup = BeautifulSoup(html, 'html.parser')
 
-        items = soup.find('div', class_='apartment-info ng-star-inserted')
+        info_flats = soup.find_all('tr', class_='ng-star-inserted')
 
-        busy = items.find('div', class_='apartment-info__status')
-        flat = items.find('div', class_='apartment-info__title')
-        area = items.find('div', class_='main-specs__item')
-        floor = items.find('div', class_='main-specs__value ng-star-inserted')
-        price = items.find('div', class_='ellipsis ng-star-inserted')
+        i = 0
+        for flat in info_flats:
+            if i > 0:
+                info_flat = flat.find_all('td', class_='ng-star-inserted')
 
-        set_info('Надеждинское полесье', flat, floor, houseFloorFlat_num[0], area, price, busy)
+                flatNum = info_flat[3].get_text()
+                floorNum = info_flat[9].get_text()
+                houseNum = info_flat[2].get_text()
+                houseNum = houseNum[-2:]
+                area = info_flat[4].get_text()
+                price = info_flat[6].get_text()
+                price = price.replace(u'\xa0', u'').replace(' ', '')[:-1]
+                busy = info_flat[7].get_text()
+
+                set_info('Надежденское полесье', flatNum, floorNum, houseNum, area, price, busy)
+
+            i += 1
+
 
     elif website == 2:
         soup = BeautifulSoup(html, 'html.parser')
@@ -92,18 +105,6 @@ def get_content(html):
             main_info[3] = price[2].get_text()
 
             website_parse(f'https://vlzu.ru{floor.get("href")}')
-
-    elif website == 3:
-        text = html.split('\n')
-
-        i = 0
-        while i < len(text):
-
-            set_info('ДаВинчи Групп', text[i+4][1:], text[i+5],
-                     text[i+1].split()[-1], text[i+6].split()[0].replace(',', '.'),
-                     text[i+2].replace(' ', '')[:-1], "Свободно")
-
-            i += 7
 
     elif website == 4:
         soup = BeautifulSoup(html, 'html.parser')
@@ -194,6 +195,8 @@ def get_content(html):
 
         set_info('Владстрой', flat, floor, 1, area.split()[0], price, 'Свободно' if int(price) != 0 else 'Занято')
 
+    print('Checked')
+
 
 def max_page():
     last_page = 0
@@ -208,10 +211,6 @@ def max_page():
         if website == 2:
             pages = soup.find_all('li', class_='Paginator_li__1PhzI')
             last_page = pages[-1].get_text()
-        elif website == 3:
-            html = get_html_with_driver(URL)
-            pages = soup.find_all('li', class_='page-item')
-            last_page = pages[-1].get_text()
 
     return int(last_page)
 
@@ -225,7 +224,7 @@ def get_website_content(html):
     apartment = apartment.get_text()
 
     set_info('Восточный луч', apartment, main_info[0], main_info[1],
-             str(main_info[2]).replace(',', '.'), str(main_info[3]).replace(' ', ''), 'Свободно')
+            str(main_info[2]).replace(',', '.'), str(main_info[3]).replace(' ', ''), 'Свободно')
 
 
 def website_parse(url):
@@ -250,27 +249,16 @@ def parse(num, id_flat_g):
             return info
 
         elif website == 1:
-            for house in range(1, 3):
-                num_house = 140 if house == 1 else 657
+            URL = get_url()
+            html = get_html_with_driver(URL)
 
-                houseFloorFlat_num[0] = house
-                for flat in range(1, 112):
-                    URL = get_url(house=num_house, flat=flat + 712)
-
-                    parser(URL)
+            get_content(html)
 
         elif website == 2:
             for page in range(1, max_page() + 1):
                 URL = get_url(page)
 
                 parser(URL)
-
-        elif website == 3:
-            for page in range(1, 3):
-                URL = get_url(page)
-
-                text = get_html_with_driver(URL)
-                get_content(text)
 
         elif website == 4:
             for house in range(1, 3):
@@ -339,32 +327,44 @@ def parse(num, id_flat_g):
                 parser(URL)
 
     except Exception as ex:
-        #logger.error("Connection refused. Check website that you parse")
         logger.error(traceback.format_exc())
+
+    print(info)
 
     cycle_times = 0
     return info, id_flat
 
 
 def get_html_with_driver(url):
-    driver = webdriver.Chrome(executable_path='chromedriver')
+    chrome_options = Options()
+    chrome_options.add_argument("--disable-extensions")
+    chrome_options.add_argument("--disable-gpu")
+    # chrome_options.add_argument("--no-sandbox") # linux only
+    chrome_options.add_argument("--headless")
+    driver = webdriver.Chrome(options=chrome_options)
+
     html = None
 
     driver.get(url=url)
     time.sleep(5)
     while True:
         try:
-            if website == 7:
+            if website == 1:
+                count = driver.find_element(By.XPATH,
+                                            '/html/body/app-root/app-catalog/app-stock/div/div/section/div[1]'
+                                            '/app-projects/app-properties-table/app-desktop-properties-table'
+                                            '/div[2]/p-paginator/div/p-dropdown')
+                count.click()
+                time.sleep(1)
+                count = driver.find_element(By.XPATH, '//*[@id="pr_id_3_list"]/p-dropdownitem[4]/li')
+                count.click()
+                time.sleep(3)
                 html = driver.page_source
-                break
-
-            elif website == 3:
-                str = 'return document.querySelector("#code_block-26-235 > kvg-widget").shadowRoot.' \
-                      'querySelector("#app > div.widget__wrapper > div.widget__content > ' \
-                      'div > section > div > div.flats > div.flats__content > div")'
-                html = (driver.execute_script(str)).text
-                break
+            elif website == 7:
+                html = driver.page_source
+            break
         except Exception as ex:
+            logger.error(ex)
             checking_cycle()
             time.sleep(1)
 
